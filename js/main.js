@@ -31,7 +31,7 @@ const app = new Vue ({
                 completed: false,
             },
         ],
-       /* aggiunta todo */
+       /* AGGIUNTA TODO TRAMITE INPUT E INSERENDOLO CON IL CLICK SUL BOTTONE ALL'INTERNO DELLA NOSTRA LISTA  DI TODO */
        newTodo: "",
     },
 
@@ -51,6 +51,14 @@ const app = new Vue ({
                 this.newTodo= '';
             }
           
+        },
+
+        /* RIMOZIONE TODO SCELTO DA NOI AL CLICK DEL CESTINO */
+
+        /* (splice serve x elimirare gli elementi, il numero dopo la virgola indica il numero di elementi da eliminare) */
+        removeTodo(indexTodo) {
+           this.todos.splice(indexTodo, 1);
+           
         }
     }
   

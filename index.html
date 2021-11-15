@@ -44,7 +44,9 @@
                      :class="{completed: todo.completed}"> <!-- stampiamo direttamente la formula booleana dell'array oggetti (grazie al nostro style css ci andrà a barrare quelle azioni che abbiamo già fatto )  -->
                      {{todo.text}} 
                     </span>
-                    <i class="far fa-trash-alt delete"></i>
+                    <i
+                     class="far fa-trash-alt delete"
+                     @click="removeTodo" ></i>
                    
                 </li>
             </ul>

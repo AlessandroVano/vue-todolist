@@ -119,5 +119,5 @@ body {
 /* TODO CHE ELIMINO */
 
 .todo .delete:hover {
-    color: red;
+    color:  #00e165;
 }
