@@ -26,25 +26,17 @@
               <!--BOTTONE + BARRA RICERCA-->
         <section class="new-todo">
             <input type="text"
-            placeholder="Inserisci un todo">
+            placeholder="Inserisci un todo"
+            v-model="newTodo"> <!-- si usa v-model per modificare in tempo reale il contenuto   -->
 
-            <button class="btn-new-todo">Aggiungi</button>
+
+           <!--aggiunta evento click al bottone (quando cliccheremo il bottone esso aggiungerà un todo alla lista sotto)  -->
+            <button class="btn-new-todo" @click="addTodo">Aggiungi</button>
         </section>
 
         <main class="todos-section">
             <ul class="todos-list">
-             <!--    <li class="todo">
-                    <span class="text">lista cose da completare</span>
-                    <i class="far fa-trash-alt delete"></i>
-                </li>
-                <li class="todo complated">
-                    <span class="text">lista cose da completare</span>
-                    <i class="far fa-trash-alt delete"></i>
-                </li> -->
-
-
-
-
+           
                 <!-- con v-for stampo 'array di oggetti direttamente nello schermo' -->
                 <li class="todo" v-for="todo in todos">
                     <span

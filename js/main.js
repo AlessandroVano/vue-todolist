@@ -31,7 +31,27 @@ const app = new Vue ({
                 completed: false,
             },
         ],
-       
+       /* aggiunta todo */
+       newTodo: "",
     },
+
+    methods: {
+        addTodo() {
+            /* diamo delle regole per far si che non stampi stringhe vuote o con solo spazi */
+            if(this.newTodo !== '') {
+                console.log( this.newTodo);
+
+
+             /* pushiamo all'interno dell array di oggetti (e quindi stampiamo direttamente in pagina il todo che creiamo noi ) */
+                this.todos.push ({
+                    text: this.newTodo,
+                    completed: true,
+                });
+                /* Puliamo la barra di ricerca dell'input una volta che abbiamo cliccato il bottone per aggiungere il todo */
+                this.newTodo= '';
+            }
+          
+        }
+    }
   
-})
+});
