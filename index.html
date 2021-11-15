@@ -27,7 +27,10 @@
         <section class="new-todo">
             <input type="text"
             placeholder="Inserisci un todo"
-            v-model="newTodo"> <!-- si usa v-model per modificare in tempo reale il contenuto   -->
+            v-model="newTodo"
+            @keyup.enter="addTodo"
+            ref="todoInput"
+            > <!-- si usa v-model per modificare in tempo reale il contenuto / @keyup.enter gli diciamo che premendo il pulsante enter aggiungeremo il todo appena scritto  -->
 
 
            <!--aggiunta evento click al bottone (quando cliccheremo il bottone esso aggiungerà un todo alla lista sotto)  -->

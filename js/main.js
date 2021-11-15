@@ -49,6 +49,9 @@ const app = new Vue ({
                 });
                 /* Puliamo la barra di ricerca dell'input una volta che abbiamo cliccato il bottone per aggiungere il todo */
                 this.newTodo= '';
+
+                // aggiunta tramite tastiera
+                this.$refs.todoInput.focus();
             }
           
         },
