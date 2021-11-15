@@ -1,1 +1,5 @@
-console.log('hello word');
+const app = new Vue ({
+    el: '#app',
+    data: {}
+    
+})
