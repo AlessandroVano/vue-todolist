@@ -9,6 +9,10 @@
 
   /* UTILITIES */
 
+body {
+    background: rgba(0,0,0, .4);
+}
+
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -31,7 +35,8 @@
 
 .btn-new-todo:hover,
 .btn-new-todo:focus{
-    background:  rgb(161, 161, 161);
+    background:  rgb(7, 7, 7);
+    color:#00e165 ;
 }
 
 /* HEADER SECTION (img) */
@@ -57,7 +62,9 @@
     height: 30px;
     margin-right: 20px;
     border: 0;
-    border-bottom: 1px solid white;
+    color:  #000000;
+     background: rgba(0,0,0, .2); 
+    border-bottom: 1px solid  rgba(0,0,0, .2); 
     outline: none;
     transition: border .3s;
 } 
@@ -65,4 +72,51 @@
 .new-todo input:hover,
 .new-todo input:focus {
     border-color: #00e165;
+}
+
+/* TODO SECTION */
+
+.todos-section {
+    margin: 45px 0;
+}
+
+.todos-list {
+    padding: 15px 30px;
+    background-color:rgba(0,0,0, .3) ;
+    box-shadow: 0 15px 10px -10px rgba(0,0,0, .3 );
+}
+
+.todo {
+    display: flex;
+    padding: 10px 0;
+    border-bottom:  1px solid rgba(0,0,0, .1 );
+    cursor: pointer;
+}
+
+.todo:last-child {
+    border: none
+}
+
+
+.todo .text {
+    position: relative;
+    flex-grow: 1;
+    padding: 0 30px;
+} 
+
+ .todo .text::before {
+    content:'';
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border: 1px solid  #000;
+    transition: background .2s;
+}
+
+
+
+.todo .delete:hover{
+    color: rgb(36, 121, 36);
 }
