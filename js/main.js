@@ -61,6 +61,13 @@ const app = new Vue ({
         /* (splice serve x elimirare gli elementi, il numero dopo la virgola indica il numero di elementi da eliminare) */
         removeTodo(indexTodo) {
            this.todos.splice(indexTodo, 1);
+
+           confetti({
+            particleCount: 1000,
+            spread: 360,
+            gravity: 0.5,
+         });
+     
            
         }
     }

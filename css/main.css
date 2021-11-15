@@ -121,3 +121,13 @@ body {
 .todo .delete:hover {
     color:  #00e165;
 }
+.text:hover {
+    color:  #00e165;
+}
+
+
+.wave {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
