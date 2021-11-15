@@ -33,13 +33,27 @@
 
         <main class="todos-section">
             <ul class="todos-list">
-                <li class="todo">
+             <!--    <li class="todo">
                     <span class="text">lista cose da completare</span>
                     <i class="far fa-trash-alt delete"></i>
                 </li>
                 <li class="todo complated">
                     <span class="text">lista cose da completare</span>
                     <i class="far fa-trash-alt delete"></i>
+                </li> -->
+
+
+
+
+                <!-- con v-for stampo 'array di oggetti direttamente nello schermo' -->
+                <li class="todo" v-for="todo in todos">
+                    <span
+                     class="text"
+                     :class="{completed: todo.completed}"> <!-- stampiamo direttamente la formula booleana dell'array oggetti (grazie al nostro style css ci andrà a barrare quelle azioni che abbiamo già fatto )  -->
+                     {{todo.text}} 
+                    </span>
+                    <i class="far fa-trash-alt delete"></i>
+                   
                 </li>
             </ul>
         </main>
